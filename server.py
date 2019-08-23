@@ -69,6 +69,20 @@ def stores_update(store_id):
         return redirect(url_for('stores_show', store_id=store_id))
 
 
+@app.route("/stores/<store_id>/delete", methods=['POST'])
+def stores_destroy(store_id):
+    s = Store.get_by_id(store_id)
+
+    try:
+        if s.delete_instance():
+            flash('Successfully deleted', 'success')
+            return redirect(url_for('stores_index'))
+
+    except:
+        flash('Please try again', 'danger')
+        return redirect(url_for('stores_index'))
+
+
 @app.route("/warehouses/new")
 def warehouses_new():
     warehouses = Warehouse.select()

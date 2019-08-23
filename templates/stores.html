@@ -13,6 +13,11 @@
         <tr>
             <td>{{ store.name }}</td>
             <td>{{ store.warehouses.count() }}</td>
+            <td>
+                <form action="{{ url_for('stores_destroy', store_id=store.id) }}" method="POST">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </td>   
         </tr>
         {% endfor %}
     </tbody>
