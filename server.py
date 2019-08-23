@@ -32,14 +32,14 @@ def stores_new():
 def stores_create():
     s = Store(name=request.form['store_name'])
 
-    try:
-        if s.save():
-            flash(f'{s.name} successfully added', 'success')
-            return redirect(url_for('stores_new'))
-
-    except pw.IntegrityError:
-        flash(f'{s.name} already exists', 'danger')
+    if s.save():
+        flash(f'{s.name} successfully added', 'success')
         return redirect(url_for('stores_new'))
+
+    else:
+        flash(f'{s.errors[0]}', 'danger')
+        return redirect(url_for('stores_new'))
+        # return render_template('stores_new.html', errors=s.errors)
 
 
 @app.route("/stores")
@@ -93,19 +93,14 @@ def warehouses_new():
 @app.route("/warehouses", methods=["POST"])
 def warehouses_create():
 
-    try:
-        store = Store.get_by_id(request.form['store_id'])
-        w = Warehouse(location=request.form['location'], store=store)
-        if w.save():
-            flash(f'{w.location} successfully added', 'success')
-            return redirect(url_for('warehouses_new'))
-
-    except pw.IntegrityError:
-        flash(f'{store.name} already assigned a warehouse', 'danger')
+    store = Store.get_by_id(request.form['store_id'])
+    w = Warehouse(location=request.form['location'], store=store)
+    if w.save():
+        flash(f'{w.location} successfully added', 'success')
         return redirect(url_for('warehouses_new'))
-    
-    except:
-        flash('Please try again', 'danger')
+
+    else:
+        flash(f'{w.errors[0]}', 'danger')
         return redirect(url_for('warehouses_new'))
 
 
