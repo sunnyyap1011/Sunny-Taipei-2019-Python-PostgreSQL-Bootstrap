@@ -87,7 +87,7 @@ def stores_destroy(store_id):
 def warehouses_new():
     warehouses = Warehouse.select()
     stores = Store.select()
-    return render_template('warehouse.html', warehouses=warehouses , stores=stores)
+    return render_template('warehouses_new.html', warehouses=warehouses , stores=stores)
 
 
 @app.route("/warehouses", methods=["POST"])
