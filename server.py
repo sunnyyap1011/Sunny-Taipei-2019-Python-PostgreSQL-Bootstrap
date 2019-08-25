@@ -83,6 +83,12 @@ def stores_destroy(store_id):
         return redirect(url_for('stores_index'))
 
 
+@app.route("/warehouses")
+def warehouses_index():
+    warehouses = Warehouse.select()
+    return render_template('warehouses.html', warehouses=warehouses)
+
+
 @app.route("/warehouses/new")
 def warehouses_new():
     warehouses = Warehouse.select()
