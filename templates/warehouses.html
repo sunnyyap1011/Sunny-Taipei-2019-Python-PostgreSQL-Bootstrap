@@ -1,0 +1,21 @@
+{% extends "_layout.html" %}
+{% block content %}
+<h1>Warehouses</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Warehouses Location</th>
+            <th>Store Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for warehouse in warehouses %}
+        <tr>
+            <td>{{ warehouse.location }}</td>
+            <td>{{ warehouse.store.name }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+
