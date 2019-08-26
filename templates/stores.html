@@ -1,6 +1,9 @@
 {% extends "_layout.html" %}
 {% block content %}
-<h1>Stores</h1>
+<div class="d-flex align-items-center justify-content-between">
+    <h1>Stores</h1>
+    <a href="{{ url_for('stores_new') }}">Add Store ? Click HERE</a>
+</div>
 <table class="table">
     <thead>
         <tr>
@@ -11,7 +14,9 @@
     <tbody>
         {% for store in stores %}
         <tr>
-            <td>{{ store.name }}</td>
+            <td>
+                <a href="{{ url_for('stores_show', store_id=store.id) }}">{{ store.name }}</a>
+            </td>
             <td>{{ store.warehouses.count() }}</td>
             <td>
                 <form action="{{ url_for('stores_destroy', store_id=store.id) }}" method="POST">
