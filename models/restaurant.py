@@ -6,6 +6,7 @@ class Restaurant(BaseModel):
     address = pw.CharField()
     google_map_link = pw.CharField(null=True)
     area_code = pw.CharField(null=True)
+    operating_hours = pw.CharField(null=True)
     must_try = pw.CharField(null=True)
     notes = pw.CharField(null=True)
 
