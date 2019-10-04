@@ -15,11 +15,14 @@
 
 <div class="d-flex flex-column m-2 align-items-center">
     <h5>What you want to do?</h5>
-    <div class="btn btn-primary w-50 my-2">
-        <a href={{ url_for("restaurants.new") }} class="text-white">Add Restaurant</a>
-    </div>
-    <div class="btn btn-primary w-50 my-2">
-        <a href={{ url_for("restaurants.index") }} class="text-white" style="font-size: 14px;">View All Restaurants</a>
-    </div>
+
+    <button type="button" class="btn btn-primary my-2 text-white w-50" onclick="window.location.href='{{ url_for('restaurants.new') }}';">
+        Add Restaurant
+    </button>
+
+    <button type="button" class="btn btn-primary my-2 text-white w-50" style="font-size: 14px;" onclick="window.location.href='{{ url_for('restaurants.index') }}';">
+            View All Restaurants
+    </button>
+
 </div>
 {% endblock %}
