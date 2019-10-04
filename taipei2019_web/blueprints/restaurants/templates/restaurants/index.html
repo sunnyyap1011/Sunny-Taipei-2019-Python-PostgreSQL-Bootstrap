@@ -16,17 +16,19 @@
                 <th></th>
             </tr>
         </thead>
-        <tbody style="overflow-y: auto;">
-            {% for restaurant in restaurants %}
-            <tr>
-                <td>
-                    <a href="{{ url_for('restaurants.show', restaurant_id=restaurant.id) }}">{{ restaurant.name }}</a>
-                </td>
-                <td>{{ restaurant.address }}</td>
-                <td><a href={{ restaurant.google_map_link }} target="_blank">{{ restaurant.google_map_link }}</a></td>
-                <td>{{ restaurant.area_code }}</td>
-            </tr>
-            {% endfor %}
+        {% if restaurants %}
+            <tbody style="overflow-y: auto;">
+                {% for restaurant in restaurants %}
+                <tr>
+                    <td>
+                        <a href="{{ url_for('restaurants.show', restaurant_id=restaurant.id) }}">{{ restaurant.name }}</a>
+                    </td>
+                    <td>{{ restaurant.address }}</td>
+                    <td><a href={{ restaurant.google_map_link }} target="_blank">{{ restaurant.google_map_link }}</a></td>
+                    <td>{{ restaurant.area_code }}</td>
+                </tr>
+                {% endfor %}
+        {% endif %}
         </tbody>
     </table>
 </div>
