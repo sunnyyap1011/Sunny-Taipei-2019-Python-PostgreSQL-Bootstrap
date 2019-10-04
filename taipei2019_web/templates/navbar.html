@@ -11,13 +11,13 @@
                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href={{ url_for('restaurants_index') }}>All Restaurants</a>
+                <a class="nav-link" href={{ url_for('restaurants.index') }}>All Restaurants</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href={{ url_for('restaurants_new') }}>Add Restaurant</a>
+                <a class="nav-link" href={{ url_for('restaurants.new') }}>Add Restaurant</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0" action={{ url_for('restaurants_search') }} method="POST">
+        <form class="form-inline my-2 my-lg-0" action={{ url_for('restaurants.search') }} method="POST">
             <input class="form-control mr-sm-2" type="search" placeholder="Restaurant name" aria-label="Search"
                 name="search_input">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>

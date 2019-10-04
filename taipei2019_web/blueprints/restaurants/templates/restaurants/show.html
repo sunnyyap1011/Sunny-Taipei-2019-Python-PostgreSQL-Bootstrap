@@ -17,7 +17,7 @@
     <a href={{ restaurant.google_map_link }} target="_blank">Navigate in Google Map</a>
 </div>
 
-<form action={{ url_for('restaurants_update', restaurant_id=restaurant.id) }} method="POST" class="border p-3">
+<form action={{ url_for('restaurants.update', restaurant_id=restaurant.id) }} method="POST" class="border p-3">
     <div class="form-group">
         <label for="restaurant_must_try" class="font-weight-bold"> Update Must Try:</label>
         <input type="text" name="restaurant_must_try" class="form-control" value="{{restaurant.must_try}}" />

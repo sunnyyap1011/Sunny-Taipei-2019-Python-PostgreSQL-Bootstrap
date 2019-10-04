@@ -1,8 +1,8 @@
 {% extends "_layout.html" %}
 {% block content %}
 <h3 class="my-2">Add Restaurant</h3>
-<a href={{ url_for('restaurants_index') }}>Click here to view all restaurants</a>
-<form action={{ url_for('restaurants_create') }} method="POST" class="my-2">
+<a href={{ url_for('restaurants.index') }}>Click here to view all restaurants</a>
+<form action={{ url_for('restaurants.create') }} method="POST" class="my-2">
     <div class="form-group">
         <label for="restaurant_name">Name:</label>
         <input type="text" name="restaurant_name" class="form-control" />

@@ -2,7 +2,7 @@
 {% block content %}
 <div class="d-flex flex-column flex-sm-row align-items-center justify-content-between m-2">
     <h3>Restaurants</h3>
-    <a href="{{ url_for('restaurants_new') }}">Add Restaurants ? Click HERE</a>
+    <a href="{{ url_for('restaurants.new') }}">Add Restaurants ? Click HERE</a>
 </div>
 
 <div class="table_container" style="overflow-x: auto;">
@@ -20,7 +20,7 @@
             {% for restaurant in restaurants %}
             <tr>
                 <td>
-                    <a href="{{ url_for('restaurants_show', restaurant_id=restaurant.id) }}">{{ restaurant.name }}</a>
+                    <a href="{{ url_for('restaurants.show', restaurant_id=restaurant.id) }}">{{ restaurant.name }}</a>
                 </td>
                 <td>{{ restaurant.address }}</td>
                 <td><a href={{ restaurant.google_map_link }} target="_blank">{{ restaurant.google_map_link }}</a></td>
