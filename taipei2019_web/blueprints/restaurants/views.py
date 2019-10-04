@@ -49,7 +49,7 @@ def update(restaurant_id):
 
         try:
             if r.save():
-                flash(f"{r.name}'s Must Try successfully updated", 'success')
+                flash(f"{r.name}'s successfully updated", 'success')
                 return redirect(url_for('restaurants.show', restaurant_id=restaurant_id))
 
         except:
