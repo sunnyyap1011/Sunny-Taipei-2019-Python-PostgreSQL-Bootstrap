@@ -25,11 +25,6 @@
                 <td>{{ restaurant.address }}</td>
                 <td><a href={{ restaurant.google_map_link }} target="_blank">{{ restaurant.google_map_link }}</a></td>
                 <td>{{ restaurant.area_code }}</td>
-                <!-- <td>
-                    <form action="{{ url_for('restaurants_destroy', restaurant_id=restaurant.id) }}" method="POST">
-                        <button type="submit" class="btn btn-danger">Delete</button>
-                    </form>
-                </td> -->
             </tr>
             {% endfor %}
         </tbody>
