@@ -3,9 +3,16 @@ import peewee as pw
 from flask import Flask, flash, render_template, request, redirect, url_for
 from models import db, Restaurant
 import os
+import config
 
 app = Flask(__name__)
 app.secret_key = os.getenv('SECRET_KEY')
+
+if os.getenv('FLASK_ENV') == 'production':
+    app.config.from_object("config.ProductionConfig")
+else:
+    app.config.from_object("config.DevelopmentConfig")
+
 
 @app.before_request
 def before_request():
@@ -16,9 +23,9 @@ def after_request(response):
     db.close()
     return response
 
-@app.cli.command()
-def migrate():
-    db.evolve(ignore_tables={'base_model'})
+# @app.cli.command()
+# def migrate():
+#     db.evolve(ignore_tables={'base_model'})
 
 @app.route("/")
 def index():
