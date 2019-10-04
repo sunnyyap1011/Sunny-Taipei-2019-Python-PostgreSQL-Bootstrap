@@ -1,0 +1,27 @@
+{% extends "_layout.html" %}
+{% block content %}
+<h4 class="my-3 font-weight-bold">{{ restaurant.name }}</h4>
+<div class="my-4">
+    <div class="d-flex">
+        <p class="font-weight-bold">Address:</p>
+        <p class="text-info ml-2">{{ restaurant.address }}</p>
+    </div>
+    <div class="d-flex">
+        <p class="font-weight-bold">Area Code:</p>
+        <p class="text-success ml-2">{{ restaurant.area_code }}</p>
+    </div>
+    <div class="d-flex">
+        <p class="font-weight-bold">Must Try:</p>
+        <p class="ml-2">{{ restaurant.must_try }}</p>
+    </div>
+    <a href={{ restaurant.google_map_link }} target="_blank">Navigate in Google Map</a>
+</div>
+
+<form action={{ url_for('restaurants_update', restaurant_id=restaurant.id) }} method="POST" class="border p-3">
+    <div class="form-group">
+        <label for="restaurant_must_try" class="font-weight-bold"> Update Must Try:</label>
+        <input type="text" name="restaurant_must_try" class="form-control" value="{{restaurant.must_try}}" />
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>
+{% endblock %}

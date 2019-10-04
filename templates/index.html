@@ -1,11 +1,22 @@
 {% extends "_layout.html" %}
 {% block content %}
-<h1>Homepage</h1>
+<!-- <h3 class="m-2">Homepage</h3> -->
 
-<div class="d-flex flex-column">
-    <a href={{ url_for("stores_new") }}>Create Store</a>
-    <a href={{ url_for("stores_index") }}>List of Stores</a>
-    <a href={{ url_for("warehouses_new") }}>Create Warehouse</a>
-    <a href={{ url_for("warehouses_index") }}>List of Warehouses</a>
+<div class="mx-2 my-3">
+    <h5 class="my-3">Information:</h5>
+    <div class="d-flex">
+        <p style="width: 100px;">Date:</p>
+        <p>21 - 25 October 2019</p>
+    </div>
+    <div class="d-flex">
+        <p style="width: 100px;">Day:</p>
+        <p>Monday - Friday</p>
+    </div>
+</div>
+
+<div class="d-flex flex-column m-2">
+    <h6>What you want to do?</h6>
+    <a href={{ url_for("restaurants_new") }}>Add a new Restaurant</a>
+    <a href={{ url_for("restaurants_index") }}>View All Restaurants</a>
 </div>
 {% endblock %}
