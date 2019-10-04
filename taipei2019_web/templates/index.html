@@ -13,9 +13,13 @@
     </div>
 </div>
 
-<div class="d-flex flex-column m-2">
-    <h6>What you want to do?</h6>
-    <a href={{ url_for("restaurants.new") }}>Add a new Restaurant</a>
-    <a href={{ url_for("restaurants.index") }}>View All Restaurants</a>
+<div class="d-flex flex-column m-2 align-items-center">
+    <h5>What you want to do?</h5>
+    <div class="btn btn-primary w-50 my-2">
+        <a href={{ url_for("restaurants.new") }} class="text-white">Add Restaurant</a>
+    </div>
+    <div class="btn btn-primary w-50 my-2">
+        <a href={{ url_for("restaurants.index") }} class="text-white">View All Restaurants</a>
+    </div>
 </div>
 {% endblock %}
