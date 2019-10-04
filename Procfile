@@ -1,1 +1,1 @@
- web: python migrate.py; gunicorn start:server --preload
+ web: python migrate.py; gunicorn server --preload
