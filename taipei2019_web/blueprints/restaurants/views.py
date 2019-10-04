@@ -26,7 +26,7 @@ def create():
         # return render_template('restaurants/new.html', errors=s.errors)
 
 
-@restaurants_blueprint.route("/restaurants")
+@restaurants_blueprint.route("/")
 def index():
     restaurants = Restaurant.select().order_by(Restaurant.area_code.asc())
     return render_template('restaurants/index.html', restaurants=restaurants)
