@@ -45,6 +45,7 @@ def update(restaurant_id):
 
     if r:
         r.must_try = request.form['restaurant_must_try']
+        r.notes = request.form['restaurant_notes']
 
         try:
             if r.save():
