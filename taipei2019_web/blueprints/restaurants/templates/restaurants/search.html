@@ -1,30 +1,38 @@
 {% extends "_layout.html" %}
 {% block content %}
-<div class="d-flex align-items-center justify-content-between">
-    <h1>Restaurants</h1>
+<div class="d-flex flex-column flex-sm-row align-items-center justify-content-between m-2">
+    <h3>Restaurants</h3>
     <a href="{{ url_for('restaurants.new') }}">Add Restaurants ? Click HERE</a>
 </div>
-<table class="table">
-    <thead>
-        <tr>
-            <th>Restaurant Name</th>
-            <th>Address</th>
-            <th>Link to Google Map</th>
-            <th>Area Code</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for restaurant in restaurants %}
-        <tr>
-            <td>
-                <a href="{{ url_for('restaurants.show', restaurant_id=restaurant.id) }}">{{ restaurant.name }}</a>
-            </td>
-            <td>{{ restaurant.address }}</td>
-            <td><a href={{ restaurant.google_map_link }} target="_blank">{{ restaurant.google_map_link }}</a></td>
-            <td>{{ restaurant.area_code }}</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+<div class="d-flex w-100 justify-content-center d-lg-none">
+    <form class="form-inline my-2 my-lg-0" action={{ url_for('restaurants.search') }} method="POST">
+        <input class="form-control mr-sm-2 w-75" type="search" placeholder="Restaurant name" aria-label="Search"
+            name="search_input">
+        <button class="btn btn-outline-success my-2 my-sm-0 w-25" type="submit">Search</button>
+    </form>
+</div>
+<div class="table_container" style="overflow-x: auto;">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Restaurant Name</th>
+                <th>Address</th>
+                <th>Link to Google Map</th>
+                <th>Area Code</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for restaurant in restaurants %}
+            <tr>
+                <td>
+                    <a href="{{ url_for('restaurants.show', restaurant_id=restaurant.id) }}">{{ restaurant.name }}</a>
+                </td>
+                <td>{{ restaurant.address }}</td>
+                <td><a href={{ restaurant.google_map_link }} target="_blank">{{ restaurant.google_map_link }}</a></td>
+                <td>{{ restaurant.area_code }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
 {% endblock %}
-
