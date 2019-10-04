@@ -1,6 +1,6 @@
 import peeweedbevolve
 import peewee as pw
-from flask import Flask, flash, render_template, request, redirect, url_for
+from flask import Flask, flash, render_template, request, redirect, url_for, send_from_directory
 from models import db, Restaurant
 import os
 import config
@@ -24,6 +24,11 @@ def _db_close(exc):
         print(db)
         print(db.close())
     return exc
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static', 'images'),
+                               'favicon.ico', mimetype='image/png')
 
 # @app.after_request
 # def after_request(response):
