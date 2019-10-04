@@ -7,6 +7,7 @@ class Restaurant(BaseModel):
     google_map_link = pw.CharField(null=True)
     area_code = pw.CharField(null=True)
     must_try = pw.CharField(null=True)
+    notes = pw.CharField(null=True)
 
     def validate(self):
         duplicate_name = Restaurant.get_or_none(Restaurant.name == self.name)
