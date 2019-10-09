@@ -13,9 +13,9 @@ class Restaurant(BaseModel):
 
     def validate(self):
         duplicate_name = Restaurant.get_or_none(Restaurant.name == self.name)
-        duplicate_address = Restaurant.get_or_none(Restaurant.address == self.address)
+        # duplicate_address = Restaurant.get_or_none(Restaurant.address == self.address)
 
         if not self.id and duplicate_name:
             self.errors.append('Restaurant name not unique')
-        if not self.id and duplicate_address:
-            self.errors.append('Restaurant address already existed')
+        # if not self.id and duplicate_address:
+        #     self.errors.append('Restaurant address already existed')

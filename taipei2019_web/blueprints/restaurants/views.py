@@ -80,7 +80,10 @@ def destroy(restaurant_id):
 def search():
     x = request.form['search_input']
 
-    restaurants = Restaurant.select().where(Restaurant.name.contains(x) | Restaurant.area_code.contains(x))
+    if x == "star":
+        restaurants = Restaurant.select().where(Restaurant.star == True)
+    else:
+        restaurants = Restaurant.select().where(Restaurant.name.contains(x) | Restaurant.area_code.contains(x))
 
     if restaurants: 
         return render_template('restaurants/search.html', restaurants=restaurants)
