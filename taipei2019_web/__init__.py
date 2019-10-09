@@ -1,6 +1,7 @@
 from app import app
 from flask import render_template, send_from_directory
 from taipei2019_web.blueprints.restaurants.views import restaurants_blueprint
+from taipei2019_web.blueprints.travel_plan.views import travel_plan_blueprint
 from flask_assets import Environment, Bundle
 from .util.assets import bundles
 import os
@@ -9,6 +10,7 @@ assets = Environment(app)
 assets.register(bundles)
 
 app.register_blueprint(restaurants_blueprint, url_prefix="/restaurants")
+app.register_blueprint(travel_plan_blueprint, url_prefix="/travel_plan")
 
 
 @app.route("/")

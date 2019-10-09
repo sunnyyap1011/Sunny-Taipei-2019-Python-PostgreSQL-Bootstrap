@@ -1,0 +1,300 @@
+{% extends "_layout.html" %}
+{% block content %}
+
+<div>
+    <h3 class="text-monospace mx-3 my-4">Travel Plan</h3>
+
+    <div class="accordion mb-3" id="accordionExample">
+
+        <div class="card">
+            <div class="card-header" id="headingOne" style="background-color: papayawhip">
+                <h2 class="mb-0">
+                    <button class="btn btn-link text-dark font-weight-bold" type="button" data-toggle="collapse"
+                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Day 1 - Monday 【 西門町，饒河夜市 】
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">05:00 ? </span>
+                            To Salak Tinggi Station
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">06:00</span>
+                            Reach KLIA2
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">07:35</span>
+                            Departure from KUL
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">12:20</span>
+                            Reach 臺灣桃園國際機場
+                        </li>
+                        <li class="list-group-item">
+                            Buy <b>Sim Card</b> and <b>Taipei EasyCard 悠遊卡</b> at Airport
+                            <br />
+                            <small class="text-info">*Electronic Stored-Value Card Service Counter located at the
+                                Arrival Hall of Terminal 1</small>
+                            <br />
+                            <span class="badge badge-primary badge-pill">Also in Convenient Stores</span>
+                        </li>
+                        <li class="list-group-item">
+                            Take Taoyuan Airport <b>MRT Express</b> to Taipei Station
+                            <span class="badge badge-primary badge-pill">39 mins</span>
+                            <span class="badge badge-primary badge-pill">3 stops</span>
+                        </li>
+                        <li class="list-group-item">
+                            Taipei AP H Imperial 台北亞太H帝國
+                            <span class="badge badge-primary badge-pill">11樓</span>
+                            <span class="badge badge-primary badge-pill">Check-in: 15:00</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">15:00</span>
+                            <a href="{{ url_for('restaurants.show', restaurant_id=52) }}">馬辣頂級麻辣鴛鴦火鍋-西門店</a>
+                            <span class="badge badge-primary badge-pill">long queue</span>
+                            <span class="badge badge-primary badge-pill">try our luck</span>
+                        </li>
+                        <li class="list-group-item">
+                            Explore <b>西門町</b>
+                            <!-- <span class="badge badge-primary badge-pill">Check-in: 15:00</span> -->
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">19:00</span>
+                            <a href="{{ url_for('restaurants.show', restaurant_id=58) }}">饒河夜市</a>
+                            <br />
+                            <span class="badge badge-primary badge-pill">松山站</span>
+                            <span class="badge badge-primary badge-pill">open - 16:00</span>
+                            <br />
+                            <a href="https://candicecity.com/10487/" target="_blank" class="text-reset text-info"><small>&#187; 饒河街夜市必吃美食10攤</small></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingTwo" style="background-color: papayawhip">
+                <h2 class="mb-0">
+                    <button class="btn btn-link text-dark font-weight-bold" type="button" data-toggle="collapse"
+                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Day 2 - Tuesday 【 九份 】
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Breakfast</li>
+                        <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">08:15</span>
+                            Meet up at <b>GaKuDen Bakery</b>
+                            <br />
+                            <small class="text-info">*Find a minibus with the orange Klook logo at the front</small>
+                            <br />
+                            <span class="badge badge-primary badge-pill">near exit 4 of Ximen Station</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2 mr-2">08:30</span>
+                            Depart to <b>Yehliu Geopark</b>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">09:30</span>
+                            <b>Yehliu Geopark</b>
+                            <span class="badge badge-primary badge-pill">70 mins</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">10:40</span>
+                            Depart to <b>Ying Yang Sea</b>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">11:25</span>
+                            <b>Ying Yang Sea + 13 Layer Remains</b>
+                            <span class="badge badge-primary badge-pill">15 mins</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">10:40</span>
+                            Depart to <b>Golden Waterfall</b>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">11:50</span>
+                            <b>Golden Waterfall</b>
+                            <span class="badge badge-primary badge-pill">10 mins</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">12:00</span>
+                            Depart to <b>Jiufen</b>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">11:10</span>
+                            <b>Jiufen</b>
+                            <span class="badge badge-primary badge-pill">120 mins</span>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="{{ url_for('restaurants.show', restaurant_id=52) }}">Restaurant 1</a>
+                            <!-- <span class="badge badge-primary badge-pill">long queue</span> -->
+                        </li>
+                        <li class="list-group-item">
+                            <a href="{{ url_for('restaurants.show', restaurant_id=58) }}">Restaurant 2</a>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">14:10</span>
+                            Depart to <b>Shifen Waterfall</b>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">14:50</span>
+                            <b>Shifen Waterfall</b>
+                            <span class="badge badge-primary badge-pill">50 mins</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">15:40</span>
+                            Depart to <b>Shifen Old Street</b>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">15:50</span>
+                            <b>Shifen Old Street</b>
+                            <span class="badge badge-primary badge-pill">70 mins</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">17:00</span>
+                            Depart to <b>GaKuDen Bakery</b>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">18:00</span>
+                            <b>GaKuDen Bakery (XiMending)</b>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">18:30</span>
+                            <a href="{{ url_for('restaurants.show', restaurant_id=24) }}">
+                                無老鍋 (西門町店)
+                            </a>
+                            <a href="https://inline.app/reservations/-LqHOdM5k3K77qTWmA3r" target="_blank"
+                                class="badge badge-primary badge-pill">Booked &#8730;</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingThree" style="background-color: papayawhip">
+                <h2 class="mb-0">
+                    <button class="btn btn-link text-dark font-weight-bold" type="button" data-toggle="collapse"
+                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Day 3 - Wednesday【 Outlet 】
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Breakfast</li>
+                        <li class="list-group-item">
+                            Shopping
+                            <!-- <span class="badge badge-primary badge-pill">5 mins</span>
+                            <span class="badge badge-primary badge-pill">3 stops</span> -->
+                        </li>
+                        <li class="list-group-item">
+                            Continue Shopping
+                            <span class="badge badge-primary badge-pill">till you CAN'T walk</span>
+                        </li>
+                        <li class="list-group-item">Lunch</li>
+                        <!-- <li class="list-group-item">
+                            <a href="{{ url_for('restaurants.show', restaurant_id=52) }}">Restaurant 1</a>
+                            <span class="badge badge-primary badge-pill">long queue</span>
+                        </li> -->
+                        <!-- <li class="list-group-item">
+                            <a href="{{ url_for('restaurants.show', restaurant_id=58) }}">Restaurant 2</a>
+                            <span class="badge badge-primary badge-pill">松山站</span>
+                        </li> -->
+                        <li class="list-group-item">Shopssssss</li>
+                        <li class="list-group-item">Dinner</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingFour" style="background-color: papayawhip">
+                <h2 class="mb-0">
+                    <button class="btn btn-link text-dark font-weight-bold" type="button" data-toggle="collapse"
+                        data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Day 4 - Thursday 【 淡水 】
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Place 1</li>
+                        <li class="list-group-item">
+                            Place 2
+                            <!-- <span class="badge badge-primary badge-pill">5 mins</span>
+                            <span class="badge badge-primary badge-pill">3 stops</span> -->
+                        </li>
+                        <li class="list-group-item">
+                            Place 3
+                            <!-- <span class="badge badge-primary badge-pill">Level 11</span> -->
+                        </li>
+                        <li class="list-group-item">
+                            <a href="{{ url_for('restaurants.show', restaurant_id=52) }}">Restaurant 1</a>
+                            <!-- <span class="badge badge-primary badge-pill">long queue</span> -->
+                        </li>
+                        <li class="list-group-item">
+                            <a href="{{ url_for('restaurants.show', restaurant_id=58) }}">Restaurant 2</a>
+                            <!-- <span class="badge badge-primary badge-pill">松山站</span> -->
+                        </li>
+                        <li class="list-group-item">Place 4</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingFive" style="background-color: papayawhip">
+                <h2 class="mb-0">
+                    <button class="btn btn-link text-dark font-weight-bold" type="button" data-toggle="collapse"
+                        data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Day 5 - Friday
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <!-- <li class="list-group-item">Place 1</li>
+                        <li class="list-group-item">
+                            Place 2
+                            <span class="badge badge-primary badge-pill">5 mins</span>
+                            <span class="badge badge-primary badge-pill">3 stops</span>
+                        </li> -->
+                        <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">12:00</span>
+                            Taipei AP H Imperial 台北亞太H帝國
+                            <span class="badge badge-primary badge-pill">Check-out</span>
+                            <span class="badge badge-primary badge-pill">Store luggage at Hotel</span>
+                        </li>
+                        <!-- <li class="list-group-item">
+                            <a href="{{ url_for('restaurants.show', restaurant_id=52) }}">Restaurant 1</a>
+                            <span class="badge badge-primary badge-pill">long queue</span>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="{{ url_for('restaurants.show', restaurant_id=58) }}">Restaurant 2</a>
+                            <span class="badge badge-primary badge-pill">松山站</span>
+                        </li>
+                        <li class="list-group-item">Place 4</li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+{% endblock %}
