@@ -89,21 +89,34 @@ def search():
         return redirect(url_for('restaurants.index'))
 
 
-# @restaurants_blueprint.route('/star/<restaurant_id>', methods=['POST'])
-# def star(restaurant_id):
-#     r = Restaurant.get(Restaurant.id==restaurant_id)
+@restaurants_blueprint.route('/star/<restaurant_id>', methods=['POST'])
+def star(restaurant_id):
+    r = Restaurant.get(Restaurant.id==restaurant_id)
 
-#     r.star = True
+    r.star = True
 
-#     try:
-#         if r.save():
-#             flash(f"{r.name}'s successfully updated", 'success')
-#             return jsonify({
-#                 'success': True
-#             })
+    try:
+        if r.save():
+            flash(f"{r.name}'s successfully updated", 'success')
+            return redirect(url_for('restaurants.show', restaurant_id=restaurant_id))
 
-#     except:
-#         flash('Please try again', 'danger')
-#         return jsonify({
-#             'success': False
-#         })
+    except:
+        flash('Please try again', 'danger')
+        return redirect(url_for('restaurants.show', restaurant_id=restaurant_id))
+
+
+@restaurants_blueprint.route('/unstar/<restaurant_id>', methods=['POST'])
+def unstar(restaurant_id):
+    r = Restaurant.get(Restaurant.id==restaurant_id)
+
+    r.star = False
+
+    try:
+        if r.save():
+            flash(f"{r.name}'s successfully updated", 'success')
+            return redirect(url_for('restaurants.show', restaurant_id=restaurant_id))
+
+    except:
+        flash('Please try again', 'danger')
+        return redirect(url_for('restaurants.show', restaurant_id=restaurant_id))
+

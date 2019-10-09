@@ -1,6 +1,25 @@
 {% extends "_layout.html" %}
 {% block content %}
-<h4 class="my-3 font-weight-bold">{{ restaurant.name }}</h4>
+<a href={{ url_for('restaurants.index') }}>&#171; Back to all restaurants</a>
+
+<div class="d-flex align-items-center">
+    <h4 class="my-3 font-weight-bold">{{ restaurant.name }}</h4>
+
+    {% if restaurant.star %}
+    <form action={{ url_for('restaurants.unstar', restaurant_id=restaurant.id) }} method="POST" class="border-0">
+        <button type="submit" class="bg-transparent border-0" class="starbtn" id="starbtn-{{ restaurant_id }}">
+            <img src="{{ url_for('static', filename='image/yellow-star.png') }}" style="height: 25px; width: 25px;" alt="yellow-star">
+        </button>
+    </form>
+    {% else %}
+    <form action={{ url_for('restaurants.star', restaurant_id=restaurant.id) }} method="POST" class="border-0">
+        <button type="submit" class="bg-transparent border-0" class="blankbtn" id="blankbtn-{{ restaurant_id }}">
+            <img src="{{ url_for('static', filename='image/blank-star.png') }}" style="height: 20px; width: 20px;" alt="blank-star">
+        </button>
+    </form>
+    {% endif %}
+</div>
+    
 <div class="my-4">
     <div class="d-flex">
         <p class="font-weight-bold">Address:</p>
