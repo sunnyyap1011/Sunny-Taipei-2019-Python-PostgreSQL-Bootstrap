@@ -15,7 +15,13 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Star</th>
+                <th>
+                    <form action={{ url_for('restaurants.search') }} method="POST">
+                        <input class="form-control mr-sm-2 w-75" type="hidden"
+                            aria-label="Search" name="search_input" value="star">
+                        <button class="border-0 bg-transparent font-weight-bold" type="submit">Star</button>
+                    </form>
+                </th>
                 <th>Restaurant Name</th>
                 <th>Address</th>
                 <th>Link to Google Map</th>
@@ -23,29 +29,31 @@
             </tr>
         </thead>
         {% if restaurants %}
-            <tbody style="overflow-y: auto;">
-                {% for restaurant in restaurants %}
-                <tr>
-                    <td>
-                        {% if restaurant.star == True %}
-                            <Button class="bg-transparent border-0" class="starbtn" id="starbtn-{{ restaurant_id }}">
-                                <img src="{{ url_for('static', filename='image/yellow-star.png') }}" style="height: 25px; width: 25px;" alt="yellow-star">
-                            </Button>
-                        {% else %}
-                        <Button class="bg-transparent border-0" class="blankbtn" id="blankbtn-{{ restaurant_id }}">
-                            <img src="{{ url_for('static', filename='image/blank-star.png') }}" style="height: 20px; width: 20px;" alt="blank-star">
-                        </Button>
-                        {% endif %}
-                    </td>
-                    <td>
-                        <a href="{{ url_for('restaurants.show', restaurant_id=restaurant.id) }}">{{ restaurant.name }}</a>
-                    </td>
-                    <td>{{ restaurant.address }}</td>
-                    <td><a href={{ restaurant.google_map_link }} target="_blank">{{ restaurant.google_map_link }}</a></td>
-                    <td>{{ restaurant.area_code }}</td>
-                </tr>
-                {% endfor %}
-        {% endif %}
+        <tbody style="overflow-y: auto;">
+            {% for restaurant in restaurants %}
+            <tr>
+                <td>
+                    {% if restaurant.star == True %}
+                    <Button class="bg-transparent border-0" class="starbtn" id="starbtn-{{ restaurant_id }}">
+                        <img src="{{ url_for('static', filename='image/yellow-star.png') }}"
+                            style="height: 25px; width: 25px;" alt="yellow-star">
+                    </Button>
+                    {% else %}
+                    <Button class="bg-transparent border-0" class="blankbtn" id="blankbtn-{{ restaurant_id }}">
+                        <img src="{{ url_for('static', filename='image/blank-star.png') }}"
+                            style="height: 20px; width: 20px;" alt="blank-star">
+                    </Button>
+                    {% endif %}
+                </td>
+                <td>
+                    <a href="{{ url_for('restaurants.show', restaurant_id=restaurant.id) }}">{{ restaurant.name }}</a>
+                </td>
+                <td>{{ restaurant.address }}</td>
+                <td><a href={{ restaurant.google_map_link }} target="_blank">{{ restaurant.google_map_link }}</a></td>
+                <td>{{ restaurant.area_code }}</td>
+            </tr>
+            {% endfor %}
+            {% endif %}
         </tbody>
     </table>
 </div>

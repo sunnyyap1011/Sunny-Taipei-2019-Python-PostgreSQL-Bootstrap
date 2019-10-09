@@ -15,7 +15,13 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Star</th>
+                <th>
+                    <form action={{ url_for('restaurants.search') }} method="POST">
+                        <input class="form-control mr-sm-2 w-75" type="hidden" aria-label="Search" name="search_input"
+                            value="star">
+                        <button class="border-0 bg-transparent font-weight-bold" type="submit">Star</button>
+                    </form>
+                </th>
                 <th>Restaurant Name</th>
                 <th>Address</th>
                 <th>Link to Google Map</th>
