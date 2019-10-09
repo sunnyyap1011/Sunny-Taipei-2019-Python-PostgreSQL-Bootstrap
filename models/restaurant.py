@@ -9,6 +9,7 @@ class Restaurant(BaseModel):
     operating_hours = pw.CharField(null=True)
     must_try = pw.CharField(null=True)
     notes = pw.CharField(null=True)
+    star = pw.BooleanField(null=True)
 
     def validate(self):
         duplicate_name = Restaurant.get_or_none(Restaurant.name == self.name)

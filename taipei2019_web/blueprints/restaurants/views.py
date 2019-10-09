@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, redirect, url_for, request, flash
+from flask import Blueprint, render_template, redirect, url_for, request, flash, jsonify
 from models.restaurant import Restaurant
 
 restaurants_blueprint = Blueprint('restaurants',
@@ -87,3 +87,23 @@ def search():
     else:
         flash('Sorry, NO restaurant match your search. Below are the list of restaurants available.', 'danger')
         return redirect(url_for('restaurants.index'))
+
+
+# @restaurants_blueprint.route('/star/<restaurant_id>', methods=['POST'])
+# def star(restaurant_id):
+#     r = Restaurant.get(Restaurant.id==restaurant_id)
+
+#     r.star = True
+
+#     try:
+#         if r.save():
+#             flash(f"{r.name}'s successfully updated", 'success')
+#             return jsonify({
+#                 'success': True
+#             })
+
+#     except:
+#         flash('Please try again', 'danger')
+#         return jsonify({
+#             'success': False
+#         })
