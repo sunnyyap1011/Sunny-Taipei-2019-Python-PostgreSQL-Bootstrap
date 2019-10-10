@@ -136,11 +136,23 @@
                             <span class="badge badge-primary badge-pill">120 mins</span>
                         </li>
                         <li class="list-group-item">
-                            <a href="{{ url_for('restaurants.show', restaurant_id=52) }}">Restaurant 1</a>
-                            <!-- <span class="badge badge-primary badge-pill">long queue</span> -->
-                        </li>
-                        <li class="list-group-item">
-                            <a href="{{ url_for('restaurants.show', restaurant_id=58) }}">Restaurant 2</a>
+                            <div class="d-flex flex-column">
+                                <p class="mb-2">
+                                    <b>九份老街必吃美食</b>
+                                    <img src="{{ url_for('static', filename='image/yellow-star.png') }}"
+                                    style="height: 25px; width: 25px;" alt="yellow-star">
+                                </p>
+                                <small class="text-info mb-3">* 短短400公尺的路上</small>
+                                <p>&#07; <a href="{{ url_for('restaurants.show', restaurant_id=64) }}">魚丸伯仔</a></p>
+                                <p>&#07; <a href="{{ url_for('restaurants.show', restaurant_id=66) }}">阿珠雪在燒</a></p>
+                                <p>&#07; <a href="{{ url_for('restaurants.show', restaurant_id=67) }}">張記傳統魚丸</a></p>
+                                <p>&#07; <a href="{{ url_for('restaurants.show', restaurant_id=68) }}">金枝紅糟素肉圓</a></p>
+                                <p>&#07; <a href="{{ url_for('restaurants.show', restaurant_id=62) }}">阿蘭草仔粿芋粿</a></p>
+                                <p>&#07; <a href="{{ url_for('restaurants.show', restaurant_id=69) }}">郵局前油蔥粿</a></p>
+                                <p>&#07; <a href="{{ url_for('restaurants.show', restaurant_id=61) }}">賴阿婆芋圓</a></p>
+                                <p>&#07; <a href="{{ url_for('restaurants.show', restaurant_id=60) }}">阿柑姨芋圓</a></p>
+                                <p>&#07; <a href="{{ url_for('restaurants.show', restaurant_id=70) }}">SIIDCHA</a></p>
+                            </div>
                         </li>
                         <li class="list-group-item">
                             <span class="badge badge-secondary mr-2">14:10</span>
