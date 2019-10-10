@@ -90,12 +90,21 @@
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Breakfast</li>
+                        <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">07:00</span>
+                            Breakfast
+                            <br />
+                            <small class="text-info">* Must Eat - if not gonna wait till 12:10 pm - Reach Jiufen</small>
+                            <br />
+                            <span class="badge badge-primary badge-pill">Near Hotel</span>
+                            <span class="badge badge-primary badge-pill">西門町</span>
+                            <span class="badge badge-primary badge-pill">7-11</span>
+                        </li>
                         <li class="list-group-item">
                             <span class="badge badge-success mr-2">08:15</span>
                             Meet up at <b>GaKuDen Bakery</b>
                             <br />
-                            <small class="text-info">*Find a minibus with the orange Klook logo at the front</small>
+                            <small class="text-info">* Find a minibus with the orange Klook logo at the front</small>
                             <br />
                             <span class="badge badge-primary badge-pill">near exit 4 of Ximen Station</span>
                         </li>
@@ -131,7 +140,7 @@
                             Depart to <b>Jiufen</b>
                         </li>
                         <li class="list-group-item">
-                            <span class="badge badge-secondary mr-2">11:10</span>
+                            <span class="badge badge-secondary mr-2">12:10</span>
                             <b>Jiufen</b>
                             <span class="badge badge-primary badge-pill">120 mins</span>
                         </li>
@@ -243,23 +252,32 @@
             <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Place 1</li>
+                        <li class="list-group-item">
+                            Taipei Main Station to <b>Tamsui Station</b>
+                            <span class="badge badge-primary badge-pill">Tamsui-Xinyi Line</span>
+                            <span class="badge badge-primary badge-pill">55 mins</span>
+                            <span class="badge badge-primary badge-pill">18 stops</span>
+                        </li>
+                        <li class="list-group-item">
+                            Tamsui Station to <b>Tamsui Passenger Ship Wharf</b>
+                            <br />
+                            <small class="text-info">* Blue Highway [Fisherman's Wharf - Tamsui Passenger Ship Wharf]</small>
+                            <br />
+                            <span class="badge badge-primary badge-pill">15 mins</span>
+                            <span class="badge badge-primary badge-pill">non-stops</span>
+                        </li>
                         <li class="list-group-item">
                             Place 2
-                            <!-- <span class="badge badge-primary badge-pill">5 mins</span>
-                            <span class="badge badge-primary badge-pill">3 stops</span> -->
+                            <span class="badge badge-primary badge-pill">3 stops</span>
                         </li>
                         <li class="list-group-item">
                             Place 3
-                            <!-- <span class="badge badge-primary badge-pill">Level 11</span> -->
                         </li>
                         <li class="list-group-item">
                             <a href="{{ url_for('restaurants.show', restaurant_id=52) }}">Restaurant 1</a>
-                            <!-- <span class="badge badge-primary badge-pill">long queue</span> -->
                         </li>
                         <li class="list-group-item">
                             <a href="{{ url_for('restaurants.show', restaurant_id=58) }}">Restaurant 2</a>
-                            <!-- <span class="badge badge-primary badge-pill">松山站</span> -->
                         </li>
                         <li class="list-group-item">Place 4</li>
                     </ul>
