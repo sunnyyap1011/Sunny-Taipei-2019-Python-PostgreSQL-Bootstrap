@@ -2,7 +2,7 @@
 {% block content %}
 
 <div>
-    <h3 class="text-monospace mx-3 my-4">Travel Plan</h3>
+    <h3 class="text-monospace mx-3 my-4">Travel Plan (DRAFT)</h3>
 
     <div class="accordion mb-3" id="accordionExample">
 
@@ -44,9 +44,11 @@
                             <span class="badge badge-primary badge-pill">Also in Convenient Stores</span>
                         </li>
                         <li class="list-group-item">
-                            Take Taoyuan Airport <b>MRT Express</b> to Taipei Station
-                            <span class="badge badge-primary badge-pill">39 mins</span>
+                            <span class="badge badge-warning mr-2">MRT Express</span>
+                            <b>A12</b> Taoyuan Airport Terminal 1 - <b>A1</b> Taipei Main Station
+                            <span class="badge badge-primary badge-pill">36 mins</span>
                             <span class="badge badge-primary badge-pill">3 stops</span>
+                            <span class="badge badge-primary badge-pill">NT $150</span>
                         </li>
                         <li class="list-group-item">
                             Taipei AP H Imperial 台北亞太H帝國
@@ -54,17 +56,39 @@
                             <span class="badge badge-primary badge-pill">Check-in: 15:00</span>
                         </li>
                         <li class="list-group-item">
+                            <span class="badge badge-warning mr-2">Metro</span>
+                            <b>G13</b> Beimen Station - <b>G12</b> Ximen Station
+                            <span class="badge badge-primary badge-pill">2 mins</span>
+                            <span class="badge badge-primary badge-pill">NT $16</span>
+                            <span class="badge badge-success badge-pill">Songshan xingdian Line</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge badge-warning mr-2">Metro</span>
+                            <b>BL12</b> Taipei Station - <b>BL11</b> Ximen Station
+                            <span class="badge badge-primary badge-pill">3 mins</span>
+                            <span class="badge badge-primary badge-pill">NT $16</span>
+                            <span class="badge badge-primary badge-pill">Bannan Line</span>
+                        </li>
+                        <li class="list-group-item">
                             <span class="badge badge-secondary mr-2">15:00</span>
                             <a href="{{ url_for('restaurants.show', restaurant_id=52) }}">馬辣頂級麻辣鴛鴦火鍋-西門店</a>
                             <span class="badge badge-primary badge-pill">long queue</span>
                             <span class="badge badge-primary badge-pill">try our luck</span>
+                            <span class="badge badge-primary badge-pill">3pm onward - less peak</span>
                         </li>
                         <li class="list-group-item">
                             Explore <b>西門町</b>
                             <!-- <span class="badge badge-primary badge-pill">Check-in: 15:00</span> -->
                         </li>
                         <li class="list-group-item">
-                            <span class="badge badge-secondary mr-2">19:00</span>
+                            <span class="badge badge-warning mr-2">Metro</span>
+                            <b>G12</b> Ximen Station - <b>G19</b> Songshan Station
+                            <span class="badge badge-primary badge-pill">16 mins</span>
+                            <span class="badge badge-primary badge-pill">NT $20</span>
+                            <span class="badge badge-success badge-pill">Songshan xingdian Line</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">18:00</span>
                             <a href="{{ url_for('restaurants.show', restaurant_id=58) }}">饒河夜市</a>
                             <br />
                             <span class="badge badge-primary badge-pill">松山站</span>
@@ -72,6 +96,13 @@
                             <br />
                             <a href="https://candicecity.com/10487/" target="_blank"
                                 class="text-reset text-info"><small>&#187; 饒河街夜市必吃美食10攤</small></a>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">20:00</span>
+                            好市多Costco 內湖店
+                            <span class="badge badge-primary badge-pill">10:00 - 21:30</span>
+                            <span class="badge badge-primary badge-pill">Can go walk if got time</span>
+                            <span class="badge badge-primary badge-pill">Nearby Raohe night market</span>
                         </li>
                     </ul>
                 </div>
@@ -149,7 +180,7 @@
                                 <p class="mb-2">
                                     <b>九份老街必吃美食</b>
                                     <img src="{{ url_for('static', filename='image/yellow-star.png') }}"
-                                    style="height: 25px; width: 25px;" alt="yellow-star">
+                                        style="height: 25px; width: 25px;" alt="yellow-star">
                                 </p>
                                 <small class="text-info mb-3">* 短短400公尺的路上</small>
                                 <p>&#07; <a href="{{ url_for('restaurants.show', restaurant_id=64) }}">魚丸伯仔</a></p>
@@ -207,7 +238,7 @@
                 <h2 class="mb-0">
                     <button class="btn btn-link text-dark font-weight-bold" type="button" data-toggle="collapse"
                         data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Day 3 - Wednesday【 Outlet， Costco 】
+                        Day 3 - Wednesday【 Outlet， Costco， 诚品书店 】
                     </button>
                 </h2>
             </div>
@@ -216,15 +247,48 @@
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">Breakfast</li>
                         <li class="list-group-item">
-                            Shopping
-                            <!-- <span class="badge badge-primary badge-pill">5 mins</span>
-                            <span class="badge badge-primary badge-pill">3 stops</span> -->
+                            <span class="badge badge-warning mr-2">High-Speed Rail</span>
+                            Taipei Station - Taoyuan Station
+                            <span class="badge badge-primary badge-pill">21 mins</span>
+                            <span class="badge badge-primary badge-pill">NT $160</span>
+                            <span class="badge badge-success badge-pill">台灣高鐵</span>
                         </li>
+                        <li class="list-group-item">
+                            <a href="https://goo.gl/maps/aHL4EeXL546rsE5PA"><b>華泰名品城 Gloria Outlets</b></a>
+                            <span class="badge badge-primary badge-pill">10:00 - 21:00</span>
+                            <span class="badge badge-primary badge-pill"></span>
+                        </li>
+                        <li class="list-group-item">Lunch</li>
                         <li class="list-group-item">
                             Continue Shopping
                             <span class="badge badge-primary badge-pill">till you CAN'T walk</span>
                         </li>
-                        <li class="list-group-item">Lunch</li>
+                        <li class="list-group-item">
+                            <span class="badge badge-warning mr-2">High-Speed Rail</span>
+                            Taiyuan Station - Taipei Station
+                            <span class="badge badge-primary badge-pill">21 mins</span>
+                            <span class="badge badge-primary badge-pill">NT $160</span>
+                            <span class="badge badge-success badge-pill">台灣高鐵</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge badge-warning mr-2">Metro</span>
+                            Taipei Main Station - Taipei City Hall Station
+                            <span class="badge badge-primary badge-pill">12 mins</span>
+                            <span class="badge badge-primary badge-pill">NT $16</span>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="https://goo.gl/maps/bXQQLgv9yGTqKXNd9" target="_blank"><b>诚品书店 (信义旗舰店)</b></a>
+                            <span class="badge badge-primary badge-pill">台北最大</span>
+                            <span class="badge badge-primary badge-pill">11:00 - 22:00</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge badge-warning mr-2">Bus</span>
+                            MRT Taipei City Hall Station - Xinhu 3rd Rd. Intersection
+                            <span class="badge badge-danger badge-pill">BL7</span>
+                            <span class="badge badge-primary badge-pill">20 mins</span>
+                            <span class="badge badge-primary badge-pill">10 stops</span>
+                            <span class="badge badge-primary badge-pill">NT $15</span>
+                        </li>
                         <li class="list-group-item">
                             <a href="{{ url_for('restaurants.show', restaurant_id=57) }}">好市多Costco 內湖店</a>
                             <span class="badge badge-primary badge-pill">10:00 - 21:30</span>
@@ -253,37 +317,52 @@
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
-                            <span class="badge badge-secondary mr-2">Afternoon ?</span>
-                            Taipei Main Station to <b>Tamsui Station</b>
-                            <span class="badge badge-primary badge-pill">Tamsui-Xinyi Line</span>
-                            <span class="badge badge-primary badge-pill">55 mins</span>
-                            <span class="badge badge-primary badge-pill">18 stops</span>
+                            <span class="badge badge-warning mr-2">Metro</span>
+                            <b>R10</b> Taipei Station - <b>R28</b> Tamsui Station
+                            <span class="badge badge-danger badge-pill">Tamsui-Xinyi Line</span>
+                            <span class="badge badge-primary badge-pill">37 mins</span>
+                            <span class="badge badge-primary badge-pill">NT $40</span>
                         </li>
                         <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">Afternoon</span>
                             <b>淡水老街</b>
                         </li>
                         <li class="list-group-item">
-                            <span class="badge badge-secondary mr-2">Sunset time</span>
-                            Tamsui Station to <b>Tamsui Passenger Ship Wharf</b>
+                            <span class="badge badge-warning mr-2">Ship</span>
+                            Tamsui Passenger Ship Wharf C - Fisherman's Wharf
                             <br />
-                            <small class="text-info">* Blue Highway [Fisherman's Wharf - Tamsui Passenger Ship Wharf]</small>
+                            <small class="text-info">* Blue Highway</small>
                             <br />
                             <small class="text-info">- 可以直接以悠遊卡付費</small>
                             <br />
-                            <small class="text-info">- 單程全票60元</small>
-                            <br />
                             <span class="badge badge-primary badge-pill">15 mins</span>
                             <span class="badge badge-primary badge-pill">non-stops</span>
+                            <span class="badge badge-primary badge-pill">NT $60 - One-way</span>
                         </li>
                         <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">Sunset time</span>
                             <b>淡水渔人码头</b>
                         </li>
-                        <!-- <li class="list-group-item">
-                            <a href="{{ url_for('restaurants.show', restaurant_id=52) }}">Restaurant 1</a>
-                        </li> -->
-                        <!-- <li class="list-group-item">
-                            <a href="{{ url_for('restaurants.show', restaurant_id=58) }}">Restaurant 2</a>
-                        </li> -->
+                        <li class="list-group-item">
+                            <span class="badge badge-warning mr-2">Metro</span>
+                            <b>R28</b> Tamsui Station - <b>R16</b> Shilin Station
+                            <span class="badge badge-danger badge-pill">Tamsui-Xinyi Line</span>
+                            <span class="badge badge-primary badge-pill">26 mins</span>
+                            <span class="badge badge-primary badge-pill">NT $32</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">Passby</span>
+                            <a href="{{ url_for('restaurants.show', restaurant_id=75) }}"><b>士林夜市</b></a>
+                            <span class="badge badge-primary badge-pill">16:00 - 00:00</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge badge-warning mr-2">Metro</span>
+                            <b>R16</b> Shilin Station - <b>R10</b> Taipei Station
+                            <span class="badge badge-danger badge-pill">Tamsui-Xinyi Line</span>
+                            <span class="badge badge-primary badge-pill">11 mins</span>
+                            <span class="badge badge-primary badge-pill">NT $20</span>
+                            <span class="badge badge-primary badge-pill">Last Train - 00:28</span>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -314,14 +393,9 @@
                             <span class="badge badge-primary badge-pill">Store luggage at Hotel</span>
                         </li>
                         <!-- <li class="list-group-item">
-                            <a href="{{ url_for('restaurants.show', restaurant_id=52) }}">Restaurant 1</a>
-                            <span class="badge badge-primary badge-pill">long queue</span>
-                        </li>
-                        <li class="list-group-item">
                             <a href="{{ url_for('restaurants.show', restaurant_id=58) }}">Restaurant 2</a>
                             <span class="badge badge-primary badge-pill">松山站</span>
-                        </li>
-                        <li class="list-group-item">Place 4</li> -->
+                        </li> -->
                         <li class="list-group-item">
                             <span class="badge badge-secondary mr-2">23:45</span>
                             Departure from Taipei
