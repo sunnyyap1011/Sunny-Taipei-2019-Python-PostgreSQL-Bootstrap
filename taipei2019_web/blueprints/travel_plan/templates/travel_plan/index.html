@@ -2,7 +2,7 @@
 {% block content %}
 
 <div>
-    <h3 class="text-monospace mx-3 my-4">Travel Plan (DRAFT)</h3>
+    <h3 class="text-monospace mx-3 my-4">Travel Plan (Pending Day 4)</h3>
 
     <div class="accordion mb-3" id="accordionExample">
 
@@ -10,8 +10,9 @@
             <div class="card-header" id="headingOne" style="background-color: papayawhip">
                 <h2 class="mb-0">
                     <button class="btn btn-link text-dark font-weight-bold" type="button" data-toggle="collapse"
-                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Day 1 - Monday 【 西門町, 饒河夜市 】
+                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
+                        style="white-space: normal; text-align: left;">
+                        Day 1 - Monday 【 西門町, 中正紀念堂, 饒河夜市 】
                     </button>
                 </h2>
             </div>
@@ -20,11 +21,11 @@
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
-                            <span class="badge badge-secondary mr-2">05:00 ? </span>
+                            <span class="badge badge-secondary mr-2">04:30</span>
                             To Salak Tinggi Station
                         </li>
                         <li class="list-group-item">
-                            <span class="badge badge-secondary mr-2">06:00</span>
+                            <span class="badge badge-secondary mr-2">05:30</span>
                             Reach KLIA2
                         </li>
                         <li class="list-group-item">
@@ -69,16 +70,45 @@
                             <span class="badge badge-primary badge-pill">NT $16</span>
                             <span class="badge badge-primary badge-pill">Bannan Line</span>
                         </li>
-                        <li class="list-group-item">
+                        <!-- <li class="list-group-item">
                             <span class="badge badge-secondary mr-2">15:00</span>
                             <a href="{{ url_for('restaurants.show', restaurant_id=52) }}">馬辣頂級麻辣鴛鴦火鍋-西門店</a>
                             <span class="badge badge-primary badge-pill">long queue</span>
                             <span class="badge badge-primary badge-pill">try our luck</span>
                             <span class="badge badge-primary badge-pill">3pm onward - less peak</span>
+                        </li> -->
+                        <li class="list-group-item">
+                            <b>Explore 西門町</b>
+                            <br />
+                            <ul>
+                                <li>
+                                    <a href="{{ url_for('restaurants.show', restaurant_id=25) }}">程味珍魯肉飯</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url_for('restaurants.show', restaurant_id=22) }}">永和豆漿</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url_for('restaurants.show', restaurant_id=23) }}">火焰骰子牛 (西門店)</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url_for('restaurants.show', restaurant_id=28) }}">阿宗麵線</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="list-group-item">
-                            Explore <b>西門町</b>
-                            <!-- <span class="badge badge-primary badge-pill">Check-in: 15:00</span> -->
+                            <span class="badge badge-warning mr-2">Metro</span>
+                            <b>G12</b> Ximen Station - <b>G10</b> 中正紀念堂站
+                            <span class="badge badge-primary badge-pill">4 mins</span>
+                            <span class="badge badge-primary badge-pill">NT $16</span>
+                            <span class="badge badge-success badge-pill">Songshan xingdian Line</span>
+                        </li>
+                        <li class="list-group-item">
+                            <b>中正紀念堂</b>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="{{ url_for('restaurants.show', restaurant_id=41) }}"><b>二吉軒豆乳 - 金華街
+                                    Soypresso</b></a>
+                            <span class="badge badge-primary badge-pill">07:00 - 22:00</span>
                         </li>
                         <li class="list-group-item">
                             <span class="badge badge-warning mr-2">Metro</span>
@@ -88,21 +118,21 @@
                             <span class="badge badge-success badge-pill">Songshan xingdian Line</span>
                         </li>
                         <li class="list-group-item">
+                            <span class="badge badge-warning mr-2">Metro</span>
+                            <b>G10</b> 中正紀念堂站 - <b>G19</b> Songshan Station
+                            <span class="badge badge-primary badge-pill">19 mins</span>
+                            <span class="badge badge-primary badge-pill">NT $24</span>
+                            <span class="badge badge-success badge-pill">Songshan xingdian Line</span>
+                        </li>
+                        <li class="list-group-item">
                             <span class="badge badge-secondary mr-2">18:00</span>
-                            <a href="{{ url_for('restaurants.show', restaurant_id=58) }}">饒河夜市</a>
+                            <a href="{{ url_for('restaurants.show', restaurant_id=58) }}"><b>饒河夜市</b></a>
                             <br />
                             <span class="badge badge-primary badge-pill">松山站</span>
                             <span class="badge badge-primary badge-pill">open - 16:00</span>
                             <br />
                             <a href="https://candicecity.com/10487/" target="_blank"
                                 class="text-reset text-info"><small>&#187; 饒河街夜市必吃美食10攤</small></a>
-                        </li>
-                        <li class="list-group-item">
-                            <span class="badge badge-secondary mr-2">20:00</span>
-                            好市多Costco 內湖店
-                            <span class="badge badge-primary badge-pill">10:00 - 21:30</span>
-                            <span class="badge badge-primary badge-pill">Can go walk if got time</span>
-                            <span class="badge badge-primary badge-pill">Nearby Raohe night market</span>
                         </li>
                     </ul>
                 </div>
@@ -113,8 +143,9 @@
             <div class="card-header" id="headingTwo" style="background-color: papayawhip">
                 <h2 class="mb-0">
                     <button class="btn btn-link text-dark font-weight-bold" type="button" data-toggle="collapse"
-                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Day 2 - Tuesday 【 九份 】
+                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+                        style="white-space: normal; text-align: left;">
+                        Day 2 - Tuesday 【 九份, 無老鍋, 家樂福 】
                     </button>
                 </h2>
             </div>
@@ -130,6 +161,7 @@
                             <span class="badge badge-primary badge-pill">Near Hotel</span>
                             <span class="badge badge-primary badge-pill">西門町</span>
                             <span class="badge badge-primary badge-pill">7-11</span>
+                            <span class="badge badge-primary badge-pill">Bought day before</span>
                         </li>
                         <li class="list-group-item">
                             <span class="badge badge-success mr-2">08:15</span>
@@ -184,7 +216,11 @@
                                 </p>
                                 <small class="text-info mb-3">* 短短400公尺的路上</small>
                                 <p>&#07; <a href="{{ url_for('restaurants.show', restaurant_id=64) }}">魚丸伯仔</a></p>
-                                <p>&#07; <a href="{{ url_for('restaurants.show', restaurant_id=66) }}">阿珠雪在燒</a></p>
+                                <p>
+                                    &#07; <a href="{{ url_for('restaurants.show', restaurant_id=66) }}">阿珠雪在燒</a>
+                                    <img src="{{ url_for('static', filename='image/yellow-star.png') }}"
+                                        style="height: 25px; width: 25px;" alt="yellow-star">
+                                </p>
                                 <p>&#07; <a href="{{ url_for('restaurants.show', restaurant_id=67) }}">張記傳統魚丸</a></p>
                                 <p>&#07; <a href="{{ url_for('restaurants.show', restaurant_id=68) }}">金枝紅糟素肉圓</a></p>
                                 <p>&#07; <a href="{{ url_for('restaurants.show', restaurant_id=62) }}">阿蘭草仔粿芋粿</a></p>
@@ -223,10 +259,14 @@
                         <li class="list-group-item">
                             <span class="badge badge-success mr-2">18:30</span>
                             <a href="{{ url_for('restaurants.show', restaurant_id=24) }}">
-                                無老鍋 (西門町店)
+                                <b>無老鍋 (西門町店)</b>
                             </a>
                             <a href="https://inline.app/reservations/-LqHOdM5k3K77qTWmA3r" target="_blank"
                                 class="badge badge-danger badge-pill">Booked &#8730;</a>
+                        </li>
+                        <li class="list-group-item">
+                            <b>Carrefour Guilin Store 家樂福 桂林店</b>
+                            <span class="badge badge-primary badge-pill">24 hrs</span>
                         </li>
                     </ul>
                 </div>
@@ -237,15 +277,20 @@
             <div class="card-header" id="headingThree" style="background-color: papayawhip">
                 <h2 class="mb-0">
                     <button class="btn btn-link text-dark font-weight-bold" type="button" data-toggle="collapse"
-                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="white-space: normal; text-align: left;">
-                        Day 3 - Wednesday【 Outlet, Costco, 诚品书店 】
+                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+                        style="white-space: normal; text-align: left;">
+                        Day 3 - Wednesday【 Outlet, Costco 】
                     </button>
                 </h2>
             </div>
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Breakfast</li>
+                        <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">Breakfast</span>
+                            <a href="{{ url_for('restaurants.show', restaurant_id=51) }}"><b>LoCo Food 乐口福</b></a>
+                            <span class="badge badge-primary badge-pill">06:00 - 14:00</span>
+                        </li>
                         <li class="list-group-item">
                             <span class="badge badge-warning mr-2">High-Speed Rail</span>
                             Taipei Station - Taoyuan Station
@@ -258,11 +303,6 @@
                             <span class="badge badge-primary badge-pill">10:00 - 21:00</span>
                             <span class="badge badge-primary badge-pill"></span>
                         </li>
-                        <li class="list-group-item">Lunch</li>
-                        <li class="list-group-item">
-                            Continue Shopping
-                            <span class="badge badge-primary badge-pill">till you CAN'T walk</span>
-                        </li>
                         <li class="list-group-item">
                             <span class="badge badge-warning mr-2">High-Speed Rail</span>
                             Taiyuan Station - Taipei Station
@@ -271,34 +311,24 @@
                             <span class="badge badge-success badge-pill">台灣高鐵</span>
                         </li>
                         <li class="list-group-item">
-                            <span class="badge badge-warning mr-2">Metro</span>
-                            Taipei Main Station - Taipei City Hall Station
-                            <span class="badge badge-primary badge-pill">12 mins</span>
-                            <span class="badge badge-primary badge-pill">NT $16</span>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="https://goo.gl/maps/bXQQLgv9yGTqKXNd9" target="_blank"><b>诚品书店 (信义旗舰店)</b></a>
-                            <span class="badge badge-primary badge-pill">台北最大</span>
+                            <span class="badge badge-secondary mr-2">Lunch</span>
+                            <a href="{{ url_for('restaurants.show', restaurant_id=4) }}"><b>天丼てんや TendonTenya</b></a>
                             <span class="badge badge-primary badge-pill">11:00 - 22:00</span>
                         </li>
                         <li class="list-group-item">
-                            <span class="badge badge-warning mr-2">Bus</span>
-                            MRT Taipei City Hall Station - Xinhu 3rd Rd. Intersection
-                            <span class="badge badge-danger badge-pill">BL7</span>
-                            <span class="badge badge-primary badge-pill">20 mins</span>
-                            <span class="badge badge-primary badge-pill">10 stops</span>
-                            <span class="badge badge-primary badge-pill">NT $15</span>
+                            <a href="{{ url_for('restaurants.show', restaurant_id=57) }}"><b>好市多Costco 內湖店</b></a>
+                            <span class="badge badge-primary badge-pill">10:00 - 21:30</span>
+                            <span class="badge badge-primary badge-pill">Nearby Raohe night market</span>
                         </li>
                         <li class="list-group-item">
-                            <a href="{{ url_for('restaurants.show', restaurant_id=57) }}">好市多Costco 內湖店</a>
-                            <span class="badge badge-primary badge-pill">10:00 - 21:30</span>
+                            <span class="badge badge-secondary mr-2">Dinner</span>
+                            Costco Food court
                         </li>
-                        <!-- <li class="list-group-item">
-                            <a href="{{ url_for('restaurants.show', restaurant_id=58) }}">Restaurant 2</a>
-                            <span class="badge badge-primary badge-pill">松山站</span>
-                        </li> -->
-                        <li class="list-group-item">Shopssssss</li>
-                        <li class="list-group-item">Dinner</li>
+                        <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">Supper</span>
+                            <a href="{{ url_for('restaurants.show', restaurant_id=21) }}"><b>台灣松屋台北西門町店</b></a>
+                            <span class="badge badge-primary badge-pill">till 2am</span>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -308,7 +338,8 @@
             <div class="card-header" id="headingFour" style="background-color: papayawhip">
                 <h2 class="mb-0">
                     <button class="btn btn-link text-dark font-weight-bold" type="button" data-toggle="collapse"
-                        data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"
+                        style="white-space: normal; text-align: left;">
                         Day 4 - Thursday 【 淡水 】
                     </button>
                 </h2>
@@ -372,36 +403,48 @@
             <div class="card-header" id="headingFive" style="background-color: papayawhip">
                 <h2 class="mb-0">
                     <button class="btn btn-link text-dark font-weight-bold" type="button" data-toggle="collapse"
-                        data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                        Day 5 - Friday
+                        data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"
+                        style="white-space: normal; text-align: left;">
+                        Day 5 - Friday 【 诚品书店, TAIPEI 101 】
                     </button>
                 </h2>
             </div>
             <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
-                        <!-- <li class="list-group-item">Place 1</li>
-                        <li class="list-group-item">
-                            Place 2
-                            <span class="badge badge-primary badge-pill">5 mins</span>
-                            <span class="badge badge-primary badge-pill">3 stops</span>
-                        </li> -->
                         <li class="list-group-item">
                             <span class="badge badge-secondary mr-2">12:00</span>
                             Taipei AP H Imperial 台北亞太H帝國
                             <span class="badge badge-primary badge-pill">Check-out</span>
                             <span class="badge badge-primary badge-pill">Store luggage at Hotel</span>
                         </li>
-                        <!-- <li class="list-group-item">
-                            <a href="{{ url_for('restaurants.show', restaurant_id=58) }}">Restaurant 2</a>
-                            <span class="badge badge-primary badge-pill">松山站</span>
-                        </li> -->
                         <li class="list-group-item">
-                            <span class="badge badge-secondary mr-2">23:45</span>
+                            <span class="badge badge-warning mr-2">Metro</span>
+                            Taipei Main Station - Taipei City Hall Station
+                            <span class="badge badge-primary badge-pill">12 mins</span>
+                            <span class="badge badge-primary badge-pill">NT $16</span>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="https://goo.gl/maps/bXQQLgv9yGTqKXNd9" target="_blank"><b>诚品书店 (信义旗舰店)</b></a>
+                            <span class="badge badge-primary badge-pill">台北最大</span>
+                            <span class="badge badge-primary badge-pill">11:00 - 22:00</span>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="{{ url_for('restaurants.show', restaurant_id=80) }}"><b>大師兄銷魂麵舖</b></a>
+                            <span class="badge badge-primary badge-pill">11:00 - 21:30</span>
+                        </li>
+                        <li class="list-group-item">
+                            <b>TAIPEI 101</b>
+                            <ul>
+                                <li>JASONS Market Place</li>
+                            </ul>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">01:05 (SAT）</span>
                             Departure from Taipei
                         </li>
                         <li class="list-group-item">
-                            <span class="badge badge-secondary mr-2">04:25</span>
+                            <span class="badge badge-secondary mr-2">05:45 (SAT)</span>
                             Reach KLIA2
                         </li>
                     </ul>
