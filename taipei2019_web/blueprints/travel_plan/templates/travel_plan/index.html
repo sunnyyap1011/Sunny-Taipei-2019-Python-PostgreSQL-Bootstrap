@@ -2,7 +2,7 @@
 {% block content %}
 
 <div>
-    <h3 class="text-monospace mx-3 my-4">Travel Plan (Pending Day 4)</h3>
+    <h3 class="text-monospace mx-3 my-4">Travel Plan</h3>
 
     <div class="accordion mb-3" id="accordionExample">
 
@@ -340,7 +340,7 @@
                     <button class="btn btn-link text-dark font-weight-bold" type="button" data-toggle="collapse"
                         data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"
                         style="white-space: normal; text-align: left;">
-                        Day 4 - Thursday 【 淡水 】
+                        Day 4 - Thursday 【 TAIPEI 101, 诚品书店, 大師兄, 淡水 】
                     </button>
                 </h2>
             </div>
@@ -348,8 +348,48 @@
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">Breakfast</span>
+                            <!-- <a href="{{ url_for('restaurants.show', restaurant_id=80) }}"><b>大師兄銷魂麵舖-信義店</b></a>
+                            <span class="badge badge-primary badge-pill">11:00 - 21:30</span> -->
+                        </li>
+                        <li class="list-group-item">
                             <span class="badge badge-warning mr-2">Metro</span>
-                            <b>R10</b> Taipei Station - <b>R28</b> Tamsui Station
+                            <b>R10</b> Taipei Main Station - <b>R03</b> Taipei 101 Station
+                            <span class="badge badge-danger badge-pill">Tamsui-Xinyi Line</span>
+                            <span class="badge badge-primary badge-pill">14 mins</span>
+                            <span class="badge badge-primary badge-pill">NT $20</span>
+                        </li>
+                        <li class="list-group-item">
+                            <b>TAIPEI 101</b>
+                            <ul>
+                                <li>
+                                    JASONS Market Place
+                                    <span class="badge badge-primary badge-pill">09:00 - 22:00</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge badge-warning mr-2">Metro</span>
+                            <b>BL12</b> Taipei Main Station - <b>BL18</b> Taipei City Hall Station
+                            <span class="badge badge-primary badge-pill">Bannan Line</span>
+                            <span class="badge badge-primary badge-pill">12 mins</span>
+                            <span class="badge badge-primary badge-pill">NT $16</span>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="https://goo.gl/maps/bXQQLgv9yGTqKXNd9" target="_blank"><b>诚品书店 (信义旗舰店)</b></a>
+                            <span class="badge badge-primary badge-pill">台北最大</span>
+                            <span class="badge badge-primary badge-pill">11:00 - 22:00</span>
+                            <br />
+                            <small class="text-info">* Many foods inside 诚品书店 also (e.g 太陽蕃茄拉麵)</small>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge badge-secondary mr-2">Lunch</span>
+                            <a href="{{ url_for('restaurants.show', restaurant_id=80) }}"><b>大師兄銷魂麵舖-信義店</b></a>
+                            <span class="badge badge-primary badge-pill">11:00 - 21:30</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge badge-warning mr-2">Metro</span>
+                            <b>R10</b> Taipei Main Station - <b>R28</b> Tamsui Station
                             <span class="badge badge-danger badge-pill">Tamsui-Xinyi Line</span>
                             <span class="badge badge-primary badge-pill">37 mins</span>
                             <span class="badge badge-primary badge-pill">NT $40</span>
@@ -405,7 +445,7 @@
                     <button class="btn btn-link text-dark font-weight-bold" type="button" data-toggle="collapse"
                         data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"
                         style="white-space: normal; text-align: left;">
-                        Day 5 - Friday 【 诚品书店, TAIPEI 101 】
+                        Day 5 - Friday 【 Anywhere 】
                     </button>
                 </h2>
             </div>
@@ -419,25 +459,14 @@
                             <span class="badge badge-primary badge-pill">Store luggage at Hotel</span>
                         </li>
                         <li class="list-group-item">
-                            <span class="badge badge-warning mr-2">Metro</span>
-                            Taipei Main Station - Taipei City Hall Station
-                            <span class="badge badge-primary badge-pill">12 mins</span>
-                            <span class="badge badge-primary badge-pill">NT $16</span>
+                            <span class="badge badge-secondary mr-2">Lunch</span>
+                            <!-- <a href="{{ url_for('restaurants.show', restaurant_id=80) }}"><b>大師兄銷魂麵舖-信義店</b></a>
+                                <span class="badge badge-primary badge-pill">11:00 - 21:30</span> -->
                         </li>
                         <li class="list-group-item">
-                            <a href="https://goo.gl/maps/bXQQLgv9yGTqKXNd9" target="_blank"><b>诚品书店 (信义旗舰店)</b></a>
-                            <span class="badge badge-primary badge-pill">台北最大</span>
-                            <span class="badge badge-primary badge-pill">11:00 - 22:00</span>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="{{ url_for('restaurants.show', restaurant_id=80) }}"><b>大師兄銷魂麵舖</b></a>
-                            <span class="badge badge-primary badge-pill">11:00 - 21:30</span>
-                        </li>
-                        <li class="list-group-item">
-                            <b>TAIPEI 101</b>
-                            <ul>
-                                <li>JASONS Market Place</li>
-                            </ul>
+                            <span class="badge badge-secondary mr-2">Dinner</span>
+                            <!-- <a href="{{ url_for('restaurants.show', restaurant_id=80) }}"><b>大師兄銷魂麵舖-信義店</b></a>
+                                <span class="badge badge-primary badge-pill">11:00 - 21:30</span> -->
                         </li>
                         <li class="list-group-item">
                             <span class="badge badge-secondary mr-2">01:05 (SAT）</span>
